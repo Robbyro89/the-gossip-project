@@ -1,0 +1,16 @@
+<h1>Petite modif ni vu ni connu</h1>
+
+<% render 'form' %>
+
+  <%= form_tag(gossip_path, :method => :patch) do %>
+
+  <%= label_tag 'anonymous_author', 'Pas vu, pas pris' %>
+  <%= text_field_tag 'auteur anonyme' %>
+
+  <%= label_tag 'content', 'Balance...' %>
+  <%= text_area_tag 'contenu' %>
+
+  <%= submit_tag "Edite ton Gossip"%>
+<% end %>
+<br>
+<%= link_to "Retour aux Gossips", root_path %>

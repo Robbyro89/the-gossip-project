@@ -1,0 +1,19 @@
+<h1>Aller !!! Balance ton Gossip</h1>
+<p>
+  Ne reste pas passif, met donc ton gossip toi aussi
+</p>
+
+<% render 'form' %>
+
+  <%= form_tag(gossips_path) do %>
+
+  <%= label_tag 'anonymous_author', 'Pas vu, pas pris' %>
+  <%= text_field_tag 'auteur anonyme' %>
+
+  <%= label_tag 'content', 'Balance...' %>
+  <%= text_area_tag 'contenu' %>
+
+  <%= submit_tag "Balance ton ragot"%>
+<% end %>
+<br>
+<%= link_to "Retour aux Gossips", root_path %>

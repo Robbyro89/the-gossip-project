@@ -9,6 +9,19 @@
   </head>
 
   <body>
+
+  	<nav id = nav_bar>
+      <div class = "logo"><%= link_to image_tag("logoTHP.png", size: "140x120", alt: "gossip thp logo"),
+            root_path %> </div>
+
+  		<ul class = nav_bar_right>
+  			<li><%= link_to 'Nouveau Gossip', new_path %></li>
+  		</ul>
+  	</nav>
+
+  <div class = container>
     <%= yield %>
+  </div>
+
   </body>
 </html>

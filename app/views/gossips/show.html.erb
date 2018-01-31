@@ -1,0 +1,15 @@
+<h1>Voici le Gossip de #<%= @gossip.id %></h1>
+<p>
+  On vous montre tout, on vous dit tout
+</p>
+<ul>
+  <li> <strong>Auteur:</strong> <%= @gossip.anonymous_author %> </li>
+  <li> <strong>Gossip:</strong> <%= @gossip.content %> </li>
+</ul>
+
+<%= link_to "Modifie ton Gossip", edit_gossip_path(@gossip) %>
+<%= link_to "Détruit ton Gossip", gossip_path(@gossip),
+    method: :delete,
+    data: { confirm: "t'en es sûr" } %>
+
+<%= link_to "Retour aux gossips", root_path %>

@@ -1,0 +1,34 @@
+<h1>Bienvenue sur G.O.S.S.I.P Project</h1>
+
+<h2>Tous les gossips sont ici !</h2>
+  <p>Rentre dans l'univers sombre et calomnieux de The Hacking Project.</br>
+    Decouvre les derniers racontards sur les moussaillons de THP
+    Encore mieux,</br> viens partager avec nous tes ragots en tout genre et ce,
+    de maniere anonyme, on te le garanti !!!
+    <br><br>Si toi aussi tu aimes les gossips, alors ce site est fait pour toi.
+    Rejoint nous sur un simple clic et amuse toi bien...</p>
+
+<%if @gossips.count == 0 %>
+  <p>No gossips yet!</p>
+<% else %>
+  <% @gossips.each do |gossip| %>
+    <table style="width:80%">
+    	<tr>
+    		<td>Gossip </td>
+    		<td>Auteur </td>
+    		<td>Contenu </td>
+    		<td></td>
+    	<tr>
+        	<tr>
+    	  <td><strong><%=gossip.id%></strong></td>
+    	  <td><strong><%=gossip.anonymous_author%></strong></td>
+    	  <td><strong><%= gossip.content %></strong> <br></td>
+    	  <td><%= link_to 'Tu en veux plus?', gossip_path(gossip) %><br></td>
+    	</tr>
+    </table>
+    <br>
+    <br>
+  <% end %>
+<% end %>
+
+<%= link_to 'Balance ton Gossip', new_path%>
