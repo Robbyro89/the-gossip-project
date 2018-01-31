@@ -1,10 +1,7 @@
 class GossipController < ApplicationController
-  
-  def new
-    @gossip = Gossip.new
-  end
 
   def create
+    @gossip = Gossip.new
   end
 
   def show
@@ -15,6 +12,5 @@ class GossipController < ApplicationController
 
   def index
   end
-
   
 end

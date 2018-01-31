@@ -20,10 +20,4 @@ class GossipControllerTest < ActionDispatch::IntegrationTest
     get gossip_index_url
     assert_response :success
   end
-
-  test "should get new" do
-    get new_url
-    assert_response :success
-  end
-
 end

@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  get 'gossip/create'
 
-  get 'gossip/show'
+  root 'gossip#index'
 
-  get 'gossip/edit'
-
-  get 'gossip/index'
-
-  get '/new', to: 'gossip#new'
-
-  root 'application#hello'
+  get '/create', to: 'gossip#create'
+  get '/show',   to: 'gossip#show'
+  get '/edit',   to: 'gossip#edit'
+ 
 end
